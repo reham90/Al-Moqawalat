@@ -28,26 +28,59 @@ $(document).ready(function() {
   
 
   };
-  const $menu = $('.navigation-2');
-  const onMouseUp = e => {
-    if (!$menu.is(e.target) // If the target of the click isn't the container...
-      && $menu.has(e.target).length === 0) // ... or a descendant of the container.
-      {
-        $menu.removeClass('reset-left-2')
-     }
-   }
-  $("#menu-id2").click(function(e) {
-    e.preventDefault();
-    $('.bars2').toggleClass('hide-icon-2');
-    $(' .times2').toggleClass('hide-icon-2');
-    $(".navigation-2").toggleClass("reset-left-2");
+//   const $menu = $('.navigation-2');
+//   const onMouseUp = e => {
+//     if (!$menu.is(e.target) // If the target of the click isn't the container...
+//       && $menu.has(e.target).length === 0) // ... or a descendant of the container.
+//       {
+//         $menu.removeClass('reset-left-2')
+//      }
+//    }
+
+
+function manageDrop(){
+    var btn = document.querySelector('#menu-id2'),
+        view = document.querySelector('.navigation-2'),
+        
+        viewItems = view.querySelectorAll('.cat-li'),
+        body = document.body;
     
-       
+  
+    btn.addEventListener('click', function(e){ 
+        e.stopPropagation();
+        $('.bars2').toggleClass('hide-icon-2');
+    $(' .times2').toggleClass('hide-icon-2');
+        view.classList.toggle('reset-left-2');
+    }); // open menu
       
-
-});
-
-
+    for(var i = 0; i < viewItems.length; i++){
+      viewItems[i].addEventListener('click', function(e){
+        e.stopPropagation();
+        $('.bars2').toggleClass('hide-icon-2');
+        $(' .times2').toggleClass('hide-icon-2');
+        $(".navgition-2").remove('reset-left-2');
+        (out) = this.innerHTML;
+        view.classList.remove('reset-left-2');
+       
+      });
+    } // carry item content to output, 
+      // close after click
+     
+        body.addEventListener('click', function(){
+          if(view.classList.contains('reset-left-2')){
+            view.classList.remove('reset-left-2');
+            $('.bars2').toggleClass('hide-icon-2');
+        $(' .times2').toggleClass('hide-icon-2');
+            } 
+        }); // close after click outside
+       
+    
+    
+  
+  
+  }
+  
+  manageDrop();
 
 
 
