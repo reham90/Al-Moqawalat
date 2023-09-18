@@ -11,9 +11,9 @@ a:hover {
   text-decoration: none;
 }
 
-.overflow {
+/* .overflow {
   overflow: hidden;
-}
+} */
 :root {
   --main-color: #212121;
   --main-hover: #99784d;
@@ -88,13 +88,17 @@ img {
 /*preloader*/
 /*                          header section                     */
 
-.menu-name:before {
-  content: "";
-  font-weight: 900;
-  font-family: "Line Awesome Free";
+.cat-bars {
+ 
   font-size: 24px;
   margin-inline-end: 7px;
 }
+.times2 {
+ 
+  font-size: 24px;
+  margin-inline-end: 7px;
+}
+
 
 /*top header*/
 
@@ -124,7 +128,7 @@ header {
 .nav-header {
   display: flex;
   justify-content: space-between;
-  padding: 29px 0 0;
+  padding: 15px 0 0;
   transition: all 0.3s ease-in-out;
   align-items: center;
 }
@@ -155,6 +159,13 @@ header {
 .navgition {
   display: flex;
 }
+.counter-names
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 165px;
+}
 
 .slide-menu {
   display: flex;
@@ -166,10 +177,27 @@ header {
 .slide-menu-2.active i {
   transform: rotate(90deg) !important;
 }
-
+.show-icon-2{
+  display: flex;
+}
+.hide-icon-2{
+  display: none;
+}
 .without-arrow:after {
   content: " " !important;
 }
+.navigation-2{
+  opacity: 0;
+  visibility: hidden;
+}
+.reset-left-2 {
+  left: 0;
+  top: 0;
+  clip-path: circle(139.6% at 9% 15%);
+  visibility: visible;
+  opacity: 1;
+}
+
 .cats-dispaly {
   position: absolute;
   left: 0;
@@ -177,8 +205,7 @@ header {
 
   top: calc(100% + 8px);
   z-index: -1;
-  opacity: 0;
-  visibility: hidden;
+  
   width: max-content;
   min-width: 100%;
 
@@ -443,7 +470,7 @@ header {
   width: 45px;
   height: 45px;
   top: 9px;
-
+padding: 0;
   border: 0;
   outline: none;
   color: #fff;
@@ -555,9 +582,13 @@ header {
   text-align: center;
   display: block;
   width: 100%;
+  transition: 0.5s;
 }
 .city-block-link:hover .city-block-image {
   transform: scale(1.2);
+}
+.city-block-link:hover .city-title{
+  color: var(--main-hover);
 }
 
 /*                            cities-section               */
@@ -614,7 +645,7 @@ header {
 .supplier-block {
   border: 2px solid rgb(242, 242, 242);
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
-  padding: 8px 11px 0;
+  padding: 8px ;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -635,7 +666,7 @@ header {
 }
 .supplier-name {
   color: var(--main-color);
-  margin-top: 28px;
+ 
   font-size: 18px;
   font-family: "Tajawal-Bold";
   transition: 0.5s;
@@ -648,9 +679,7 @@ header {
   border: 2px solid rgb(230, 230, 230);
   position: relative;
 }
-.contact-links {
-  margin-bottom: 29px;
-}
+
 .location-badge:before {
   content: "";
   font-weight: 900;
@@ -658,26 +687,44 @@ header {
   margin-inline-end: 3px;
   font-size: 18px;
 }
+.location-badge:hover{
+  color: var(--main-hover);
+  border: 2px solid var(--main-hover);
+}
 
 .badges {
   font-size: 14px;
   color: rgb(102, 102, 102);
-  margin-inline-end: 5px;
-  padding: 7px 13px;
+  display: flex;
+  padding: 0 13px;
   border-radius: 5px;
   height: 36px;
-  font-weight: normal;
-  vertical-align: middle;
+ align-items: center;
+ transition: 0.5s;
 }
 .other-badges {
   background-color: #f2f2f2;
-  display: inline-grid;
+ border: 2px solid transparent;
   align-items: center;
 }
-.supplier-tags {
-  margin-bottom: 15px;
-  display: flex;
+.other-badges:hover{
+  color: var(--main-hover);
+  border: 2px solid var(--main-hover);
+  background-color: #fff;
 }
+.supplier-tags {
+    
+  list-style: none;
+  margin: 0 0 15px;
+  padding: 0;
+      width: 100%;
+      max-width: 100%;
+    display: flex;
+    align-items: center;
+    }
+    .supplier-tags li{
+      margin-inline-end: 5px;
+    }
 .supplier-text {
   color: var(--main-color);
   line-height: 1.625;
@@ -698,14 +745,14 @@ header {
   color: #fff;
   display: flex;
   align-items: center;
-  padding: 14px 20px;
+  padding: 0 20px;
   font-size: 14px;
   font-family: "Tajawal-Bold";
   transition: 0.5s;
   height: 45px;
   border-radius: 22.5px;
   margin-inline-end: 5px;
-  text-align: start;
+ 
 }
 .contact-link:hover {
   color: #fff;
@@ -784,13 +831,17 @@ header {
     flex-direction: column;
     max-height: 402px;
     flex-wrap: wrap;
+   
   }
 }
-
+.nav-foot-li{
+  max-width: 190px;
+  width: 180px;
+}
 .nav-foot-link {
   color: rgb(155, 155, 155);
   font-size: 14px;
-  max-width: 190px;
+ 
   display: inline-flex;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
@@ -810,7 +861,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 15px 0;
-  background-color: #000;
+  background-color: rgb(28, 28, 28);
 }
 .copy-right {
   display: -webkit-box;
@@ -872,15 +923,8 @@ html[dir="rtl"] .footer-accordion.active:after {
     text-align: center;
   }
 
-  .copy-flex {
-    padding-top: 30px;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 9;
-  }
-  .copy-right {
-    margin-bottom: 5px;
-  }
+  
+ 
 }
 
 /*                                   footer                            */
@@ -903,7 +947,7 @@ html[dir="rtl"] .footer-accordion.active:after {
   .navgition {
     display: block;
     position: fixed;
-    padding: 30px 20px;
+   
     padding-top: 0;
     left: 0;
     top: 0;
@@ -929,6 +973,7 @@ html[dir="rtl"] .footer-accordion.active:after {
   }
   .cities-grid {
     grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
   }
 
   .nav-header .big-menu {
@@ -937,7 +982,7 @@ html[dir="rtl"] .footer-accordion.active:after {
     justify-content: flex-start;
     text-align: center;
     align-items: center;
-    padding: 75px 20px 20px;
+    padding: 55px 20px;
     margin-inline-start: 0;
   }
   .nav-header li {
@@ -947,15 +992,31 @@ html[dir="rtl"] .footer-accordion.active:after {
     width: 100%;
     font-size: 14px;
     height: 50px;
+    padding-inline-start: 10px;
+    padding-inline-end: 49px;
+    font-size: 12px;
   }
   .search-input::placeholder {
-    font-size: 14px;
+    font-size: 12px;
   }
   .search-btn {
-    font-size: 20px;
+    font-size: 18px;
     width: 35px;
     height: 35px;
   }
+  .main-banner-img{
+    min-height: 580px;
+    height: auto;
+  }
+  .main-banner-img-cover{
+    min-height: 580px;
+    height: auto;
+  }
+  .main-banner-image{
+    min-height: 580px;
+    height: auto;
+  }
+ 
   .search-lists-div {
     flex-wrap: wrap;
   }
@@ -968,7 +1029,7 @@ html[dir="rtl"] .footer-accordion.active:after {
     width: 100%;
   }
   .caption-title {
-    margin-top: 175px;
+    margin-top: 150px;
   }
 
   .caption-title {
@@ -982,7 +1043,7 @@ html[dir="rtl"] .footer-accordion.active:after {
   }
   .search {
     width: 90%;
-    margin-bottom: 83px;
+    margin-bottom: 65px;
   }
   .most-search-title {
     font-size: 18px;
@@ -1029,40 +1090,48 @@ html[dir="rtl"] .footer-accordion.active:after {
   }
   .supplier-block {
     flex-wrap: wrap;
-    justify-content: center;
+    padding: 8px 20px;
+    flex-direction: column;
   }
   .supplier-text {
     max-width: 100%;
     width: 100%;
+    font-size: 14px;
   }
+  .visitors{
+    height: 40px;
+    font-size: 16px;
+}
   .contact-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
+   justify-content: center;
+   margin-bottom: 25px;
   }
   .same-link {
-    margin-inline-end: 0;
-    font-size: 13px;
-    padding: 14px 8px;
+    margin-inline-end: 10px;
+    padding: 0;
     justify-content: center;
-    white-space: nowrap;
+    width: 40px;
+    height: 40px;
   }
   .ring-icon {
     font-size: 20px;
+    margin-inline-end: 0;
   }
-  .supplier-tags {
-    margin-bottom: 15px;
 
-    width: 100%;
-    max-width: 100%;
-    display: inline-block;
-    text-align: start;
-  }
   .badges {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
+    font-size: 11px;
+    padding: 0 5px;
+    height: 28px;
   }
   .supplier-img {
     margin-inline-end: 0;
+    margin-bottom: 15px;
+  }
+  .supplier-tags{
+    flex-wrap: wrap;
+    margin: 0 0 8px;
+
   }
   .nav-foot-header:after {
     width: 0;
@@ -1070,6 +1139,9 @@ html[dir="rtl"] .footer-accordion.active:after {
     bottom: 0;
     inset-inline-start: calc(100% - 20px);
     top: 5px;
+  }
+  .same-link span{
+    display: none;
   }
 
   /*                    menu in phone size                      */
@@ -1079,8 +1151,9 @@ html[dir="rtl"] .footer-accordion.active:after {
 /*                                 arrow-top                           */
 .arrow-top {
   position: fixed;
-  bottom: 75px;
-  inset-inline-end: 21px;
+  bottom: 10px;
+  inset-inline-start: 10px;
+ 
   display: none;
   z-index: 10;
   text-decoration: none !important;
@@ -1128,6 +1201,9 @@ html[dir="rtl"] .footer-accordion.active:after {
 @media (min-width: 992px) and (max-width: 1199px) {
   .nav-header .img-logo img {
     max-width: 190px;
+  }
+  .nav-wrap{
+    max-height: 520px;
   }
   .cat-slider .swiper-wrapper {
     grid-gap: 0 15px;
@@ -1280,14 +1356,17 @@ html[dir="rtl"] .footer-accordion.active:after {
     transition: all 0.3s ease-in-out;
   }
   .show-icons .menu-bars .bar {
-    color: var(--main-hover);
+    color: var(--main-color);
   }
   .show-icons .menu-bars .times {
     color: var(--main-color);
   }
+  .fixed-header .show-icons .menu-bars .bar {
+    color: var(--main-hover);
+  }
 
   .nav-header .img-logo img {
-    max-width: 110px;
+    max-width: 130px;
   }
   .nav-header li a {
     display: flex;
@@ -1339,9 +1418,7 @@ html[dir="rtl"] .footer-accordion.active:after {
     display: block;
   }
 
-  .cats-dispaly {
-    padding-top: 14px;
-  }
+  
 
   .cats-dispaly .has-level-2:first-child {
     padding-top: 0;
@@ -1376,7 +1453,7 @@ html[dir="rtl"] .footer-accordion.active:after {
   }
   .slide-menu-2 .first-level-link {
     font-size: 14px;
-    padding-inline-start: 10px;
+    
     display: block;
     max-width: 100%;
     width: 100%;
@@ -1384,14 +1461,24 @@ html[dir="rtl"] .footer-accordion.active:after {
   .cats-div {
     max-height: 100%;
   }
+  .search-list-icon{
+    width: 100px;
+    height: 100px;
+  }
+  .category-icon{
+    width: 45px;
+  }
+  .category-name{
+    font-size: 14px;
+  }
 }
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   .slide-menu:hover .cats-dispaly {
     opacity: 1;
     visibility: visible;
     z-index: 99;
   }
-}
+} */
 
 @media only screen and (max-width: 994px) and (min-width: 768px) {
   .cities-grid {
@@ -1409,5 +1496,8 @@ html[dir="rtl"] .footer-accordion.active:after {
 
   .nav-foot-link {
     font-size: 13px;
+  }
+  .supplier-block{
+    margin-bottom: 0;
   }
 }

@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   //phone size menu onclick
   if ($(window).width() <= 991) {
-      $("#menu-id").click(function(e) {
+      $(".menu-id").click(function(e) {
           e.preventDefault();
           $('.menu-bars .bar').toggleClass('hide-icon');
           $('.menu-bars .times').toggleClass('hide-icon');
@@ -19,7 +19,7 @@ $(document).ready(function() {
           $(".navgition").removeClass("reset-left");
           $(".menu-bars .bars").toggleClass("open-bars");
           $(".menu-bars .bars").toggleClass("close-bars");
-          $("body").removeClass("overflow");
+         
       });
 
 
@@ -28,6 +28,31 @@ $(document).ready(function() {
   
 
   };
+  const $menu = $('.navigation-2');
+  const onMouseUp = e => {
+    if (!$menu.is(e.target) // If the target of the click isn't the container...
+      && $menu.has(e.target).length === 0) // ... or a descendant of the container.
+      {
+        $menu.removeClass('reset-left-2')
+     }
+   }
+  $("#menu-id2").click(function(e) {
+    e.preventDefault();
+    $('.bars2').toggleClass('hide-icon-2');
+    $(' .times2').toggleClass('hide-icon-2');
+    $(".navigation-2").toggleClass("reset-left-2");
+    
+       
+      
+
+});
+
+
+
+
+
+
+
 
   //fixed nav
   $stickyNav = $(".top-header");
@@ -84,10 +109,10 @@ $(document).ready(function() {
       },
       breakpoints: {
           0: {
-              slidesPerView: 2,
+              slidesPerView: 3,
           },
           767: {
-              slidesPerView: 4,
+              slidesPerView: 5,
           },
           992: {
               slidesPerView: 4,
