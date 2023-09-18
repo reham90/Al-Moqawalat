@@ -604,13 +604,14 @@ padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 165px;
+  gap: 130px;
 }
 .count {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+ width: 140px;
 }
 .counter-number {
   color: var(--main-hover);
@@ -943,6 +944,9 @@ html[dir="rtl"] .footer-accordion.active:after {
   .register-link:after {
     width: 123px;
     height: 38px;
+  }
+  .count{
+    width: auto;
   }
   .navgition {
     display: block;
