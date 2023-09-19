@@ -41,6 +41,7 @@ function manageDrop(){
   
     btn.addEventListener('click', function(e){ 
         e.stopPropagation();
+        e.preventDefault();
         $('.bars2').toggleClass('hide-icon-2');
     $(' .times2').toggleClass('hide-icon-2');
         view.classList.toggle('reset-left-2');
