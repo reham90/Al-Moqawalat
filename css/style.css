@@ -231,6 +231,7 @@ header {
   padding-top: 46px;
   padding-bottom: 45px;
   flex-direction: column;
+ 
 }
 
 .cats-dispaly .cat-li {
@@ -273,7 +274,11 @@ header {
 
   display: flex;
   flex-wrap: wrap;
+ 
+}
+.cat-li{
   max-width: 190px;
+    width: 180px
 }
 .cat-anchor span:hover {
   color: var(--main-hover);
@@ -906,9 +911,7 @@ padding: 0;
     text-align: start;
     margin-bottom: 20px;
   }
-  .nav-foot-header {
-    text-align: center;
-  }
+ 
 
   
  
@@ -1142,13 +1145,7 @@ padding: 0;
     margin: 0 0 8px;
    justify-content: center;
   }
-  .nav-foot-header:after {
-    width: 0;
-    height: 0;
-    bottom: 0;
-    inset-inline-start: calc(100% - 20px);
-    top: 5px;
-  }
+ 
   .same-link span{
     display: none;
   }
@@ -1208,6 +1205,9 @@ padding: 0;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+  .cats-div{
+    max-height: 600px;
+  }
   .nav-header .img-logo img {
     max-width: 190px;
   }
@@ -1224,9 +1224,7 @@ padding: 0;
   .same-link {
     font-size: 12px;
   }
-  .nav-foot-link {
-    padding-inline-end: 5px;
-  }
+ 
 
   .nav-header li {
     margin: 0 10px;
