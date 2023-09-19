@@ -28,14 +28,7 @@ $(document).ready(function() {
   
 
   };
-//   const $menu = $('.navigation-2');
-//   const onMouseUp = e => {
-//     if (!$menu.is(e.target) // If the target of the click isn't the container...
-//       && $menu.has(e.target).length === 0) // ... or a descendant of the container.
-//       {
-//         $menu.removeClass('reset-left-2')
-//      }
-//    }
+
 
 
 function manageDrop(){
@@ -189,30 +182,9 @@ function manageDrop(){
 
 
 
-  ////////////** footer transfer into accordion **//////////
+ 
 
-  if ($(window).width() <= 767) {
-      $('.nav-foot-header').addClass('footer-accordion');
-      $('.nav-foot').addClass('footer-panel');
-  }
-  $('.footer-accordion').click(function() {
-      const x = `${$(this).siblings().prop('scrollHeight') + 15}px`;
-      $('.footer-accordion').not(this).removeClass('active');
-      $(this).toggleClass('active');
-      if ($(this).siblings().css('max-height') == '0px') {
-          $(this).siblings().css('max-height', x);
-          $(this).siblings('.nav-foot').css('padding-top', '15px');
-      } else {
-          $(this).siblings().css('max-height', '0');
-          $(this).siblings('.nav-foot').css('padding-top', '0');
-      }
-
-      $('.footer-accordion').not(this).siblings().css('max-height', '0');
-      $('.footer-accordion')
-          .not(this)
-          .siblings('.nav-foot')
-          .css('padding-top', '0');
-  });
+// 
   //////////** fixed arrow to top**//////////
   $(".arrow-top").click(function() {
       $("html,body").animate({

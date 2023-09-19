@@ -110,7 +110,9 @@ header {
   z-index: 200;
   transition: all 0.3s ease-in-out;
 }
-
+.top-header{
+  position: relative;
+}
 .top-header a {
   text-decoration: none;
 }
@@ -349,10 +351,33 @@ header {
 }
 .register-link:hover {
   color: #fff;
-  background-color: var(--main-hover);
+  background-color: var(--main-color);
+}
+.register-link:hover:after{
+  display: flex;
+  background-color: var(--main-color);
+  opacity: 0.102;
+  border-radius: 300px;
+  animation: pulsate 2s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0;
+  content: "";
+  z-index: -1;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: -3px;
+  right: -3px;
+  bottom: 0;
+  width: 179px;
+  height: 48px;
 }
 .fixed-nav .register-link {
   height: 35px;
+  background:var(--main-hover);
+}
+.fixed-nav .register-link:hover{
+  background-color: var(--main-hover);
 }
 @keyframes pulsate {
   0% {
@@ -474,7 +499,7 @@ padding: 0;
   border: 0;
   outline: none;
   color: #fff;
-  font-size: 30px;
+  font-size: 24px;
   transform: scaleX(-1);
   transition: 0.5s;
 }
@@ -577,7 +602,7 @@ padding: 0;
 }
 .city-title {
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Tajawal-Bold";
   text-align: center;
   display: block;
@@ -874,46 +899,7 @@ padding: 0;
   color: #fff;
 }
 
-/*                             footer accordion                 */
-.footer-accordion.nav-foot-header {
-  margin-bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
-.footer-accordion {
-  cursor: pointer;
-  width: 100%;
-  transition: 0.4s;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.footer-panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.5s ease-out;
-  padding: 0 15px;
-}
-
-.footer-accordion:after {
-  content: "";
-  font-family: "line Awesome Free";
-  font-weight: 900;
-  font-size: 13px;
-  inset-inline-end: 20px;
-  transition: all 0.5s ease-out;
-}
-
-.footer-accordion.active:after {
-  transform: rotate(90deg);
-}
-html[dir="rtl"] .footer-accordion.active:after {
-  transform: rotate(-90deg);
-}
-/*                             footer accordion                 */
 
 @media (max-width: 767px) {
   .nav-foot-cont {
@@ -934,6 +920,20 @@ html[dir="rtl"] .footer-accordion.active:after {
 /*                    menu in phone size                      */
 
 @media (max-width: 991px) {
+  body{
+    overflow-x: hidden;
+  }
+  .nav-foot{
+    display: flex;
+    flex-direction: column;
+    max-height: 1265px;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+  .nav-foot-li{
+    width: 159px;
+    max-width: 159px;
+  }
   .register-link {
     width: 120px;
     height: 35px;
@@ -996,7 +996,7 @@ html[dir="rtl"] .footer-accordion.active:after {
     width: 100%;
     font-size: 14px;
     height: 50px;
-    padding-inline-start: 10px;
+    padding-inline-start: 15px;
     padding-inline-end: 49px;
     font-size: 12px;
   }
@@ -1004,9 +1004,12 @@ html[dir="rtl"] .footer-accordion.active:after {
     font-size: 12px;
   }
   .search-btn {
-    font-size: 18px;
+    font-size: 17px;
     width: 35px;
     height: 35px;
+  }
+  .supplier-name{
+    text-align: center;
   }
   .main-banner-img{
     min-height: 580px;
@@ -1101,7 +1104,9 @@ html[dir="rtl"] .footer-accordion.active:after {
     max-width: 100%;
     width: 100%;
     font-size: 14px;
+    text-align: center;
   }
+
   .visitors{
     height: 40px;
     font-size: 16px;
@@ -1135,7 +1140,7 @@ html[dir="rtl"] .footer-accordion.active:after {
   .supplier-tags{
     flex-wrap: wrap;
     margin: 0 0 8px;
-
+   justify-content: center;
   }
   .nav-foot-header:after {
     width: 0;
@@ -1456,11 +1461,14 @@ html[dir="rtl"] .footer-accordion.active:after {
     padding-top: 0;
   }
   .slide-menu-2 .first-level-link {
-    font-size: 14px;
+    font-size: 16px;
     
     display: block;
     max-width: 100%;
     width: 100%;
+  }
+  .cat-anchor{
+    padding-bottom: 20px;
   }
   .cats-div {
     max-height: 100%;
@@ -1485,6 +1493,9 @@ html[dir="rtl"] .footer-accordion.active:after {
 } */
 
 @media only screen and (max-width: 994px) and (min-width: 768px) {
+  .nav-foot{
+    max-height: 800px;
+  }
   .cities-grid {
     grid-template-columns: repeat(2, 1fr);
   }
