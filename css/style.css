@@ -948,6 +948,10 @@ padding: 0;
     width: 123px;
     height: 38px;
   }
+  .register-link:hover:after{
+    width: 123px;
+    height: 38px;
+  }
   .count{
     width: auto;
   }
