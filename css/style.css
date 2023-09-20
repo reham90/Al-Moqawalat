@@ -1146,6 +1146,9 @@ border:2px solid transparent;
   right: 0;
   z-index: 99;
 }
+.vendor-details .select-items{
+  top:45px;
+}
 .same-as-selected{
   border-radius: 0 !important;
 }
