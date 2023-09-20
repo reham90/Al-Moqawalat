@@ -285,7 +285,7 @@ header {
 }
 
 .fixed-nav {
-  background-color: var(--main-color);
+  background-color: var(--main-color) !important;
   margin-top: -112px;
   transition: all 0.3s ease-in-out;
 }
@@ -330,7 +330,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-
+z-index: 7;
   transition: 0.5s;
   margin-inline-start: 15px;
 }
@@ -783,7 +783,7 @@ padding: 0;
   height: 45px;
   border-radius: 22.5px;
   margin-inline-end: 5px;
- 
+ text-align: start;
 }
 .contact-link:hover {
   color: #fff;
@@ -821,6 +821,119 @@ padding: 0;
   text-align: center;
   white-space: nowrap;
 }
+
+/*                           vendor details                    */
+.vendor-details{
+  padding: 48px 0 0;
+}
+.vendor-details .supplier-block{
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  align-items: center;
+}
+.vendor-details .supplier-img{
+  order: 2;
+    margin-inline-end: 0;
+    margin-inline-start: 30px;
+    width: 360px;
+}
+.vendor-details .supplier-name-block{
+  margin: 0 0 20px;
+}
+.vendor-details .supplier-name{
+  font-size: 24px;
+  margin: 0;
+}
+.vendor-details .supplier-name:hover{
+  color: var(--main-color);
+}
+.vendor-details .supplier-details{
+  border-bottom: 1px solid rgb(230, 230, 230);
+  padding-bottom: 35px;
+}
+.social{
+  display: flex;
+  align-items: center;
+  padding-top: 17px;
+}
+.social-text{
+  color: var(--main-color);
+  margin-inline-end: 15px;
+  font-size: 16px;
+  font-family: "Tajawal-Bold";
+}
+.social-icons{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  
+}
+.social-icons li{
+  margin-inline-end: 5px;
+}
+.social-icons li:last-child{
+  margin-inline-end: 0;
+}
+.social-icons li a{
+  width: 36px;
+  height: 36px;
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+.social-icons li a:hover{
+  background-color: var(--main-hover);
+}
+.social-icon{
+font-size: 18px;
+color: var(--main-color);
+transition: 0.5s;
+}
+.social-icons li a:hover .social-icon{
+  color:#fff;
+}
+/*                        vendor details                          */
+
+
+/*                       by-city                                        */
+.vendor-details .custom-select{
+  margin: 0;
+  width: 204px;
+}
+.vendor-details .select-items div, .vendor-details .select-selected{
+  width: 204px;
+  height: 45px;
+  border-radius: 22.5px;
+}
+.city-note{
+  font-size: 16px;
+  font-family: "Tajawal-Medium";
+  color: var(--main-hover);
+  display: flex;
+  margin-inline-start: 15px;
+  display: flex;
+}
+.no-border{
+  border-bottom: 0 !important;
+}
+.pt0{
+  padding-top: 0;
+}
+.align-top{
+  align-items: flex-start !important;
+}
+.w100{
+  max-width: 100%;
+}
+
+/*                       by-city                                        */
 
 /*                                   footer                            */
 .footer {
@@ -919,12 +1032,406 @@ padding: 0;
 
 /*                                   footer                            */
 
+/*                                   join-as-vendor                            */
+.white-bg{
+  background-color: #fff;
+}
+.join-as-vendor{
+  background-color: #fff;
+  padding: 50px 0 143px;
+}
+.join-vendor-form-block{
+  display: flex;
+  justify-content: center;
+}
+.join-as-vendor-form{
+  width: 555px;
+  display: flex;
+  flex-direction: column;
+ 
+}
+.join-vendor-title{
+  color: var(--main-color);
+  font-size: 24px;
+  font-family: "Tajawal-Bold";
+  margin: 0 0 35px;
+ text-align: center;
+}
+.vendor-form-label{
+  color: var(--main-color);
+  font-size: 16px;
+  font-family: "Tajawal-Medium";
+  margin: 0 0 8px;
+  padding: 0;
+ text-align: start;
+ display: flex;
+ padding-inline-start: 20px;
+ display: flex;
+ align-items: center;
+}
+.required-field:after{
+  content:"*";
+  color: #fe0000;
+}
+.join-form-input{
+  border: 2px solid transparent;
+  outline: none;
+  transition: 0.5s;
+  width: 100%;
+  height:50px ;
+  border-radius: 25px;
+  background-color: rgb(242, 242, 242);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  margin: 0 0 16px;
+}
+.join-form-input:focus{
+  border: 2px solid var(--main-hover);
+}
+.custom-select {
+  position: relative;
+ padding: 0;
+ border: 0;
+ margin: 0 0 16px;
+ height: auto;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: #f2f2f2;
+ 
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  font-weight: 900;
+  font-family: "Line Awesome Free";
+  inset-inline-end: 26px;
+  color: rgb(128, 128, 128);
+  font-size: 16px;
+}
+
+.select-arrow-active{
+  border: 2px solid var(--main-hover);
+}
+
+/*style the items (options), including the selected item:*/
+
+.select-items div,.select-selected {
+  font-size: 16px;
+  color: rgb(128, 128, 128);
+  font-family: "Tajawal-Medium";
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+border:2px solid transparent;
+ padding: 0 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #f2f2f2;
+  top: 50px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.same-as-selected{
+  border-radius: 0 !important;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+}
+.logo-label{
+  display: flex;
+  align-items: center;
+  margin: 0 0 8px;
+}
+.logo-label .vendor-form-label{
+  margin: 0;
+}
+.logo-size{
+  color: #fe0000;
+  font-size: 14px;
+  font-family: "Tajawal-Medium";
+  display: flex;
+  margin-inline-start: 5px;
+  text-align: start;
+}
+.upload__btn{
+  width: 100%;
+  position: relative;
+}
+.upload-image{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height:36px ;
+  border-radius: 18px;
+  padding: 0 25px;
+  top:50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  inset-inline-end: 9px;
+  color: var(--main-color);
+  font-size: 14px;
+  font-family: "Tajawal-Medium";
+  background-color: #d9d9d9;
+}
+
+.upload__img-box {
+  width: 84px ;
+}
+.upload__inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.upload__img-close {
+  width: 20px;
+  height: 20px;
+  
+  background-color: rgb(251, 63, 63);
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  cursor: pointer;
+}
+.upload__img-close:after {
+  content: "";
+  font-size: 16px;
+  color: #fff;
+  font-family: "Line Awesome Free";
+  font-weight: 700;
+}
+
+.img-bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 100%;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.categories-grid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 0 69px;
+  margin: 0 0 5px;
+}
+.check-block input {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border-radius: 3px;
+  background-color: rgb(242, 242, 242);
+  margin-inline-end: 9px;
+  flex-shrink: 0;
+}
+.check-block input::before{
+  content: "";
+  display: block;
+  border: 0;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  left: 0;
+  top: 5px;
+  background-color: rgb(242, 242, 242);
+  border-radius: 3px;
+ 
+}
+.mb16{
+  margin-bottom: 16px !important;
+}
+.check-block input:checked::before{
+  content: "";
+  display: block;
+  border-radius: 3px;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  left: 0;
+  top: 5px;
+  background-color: var(--main-hover);
+ 
+}
+.check-block input:checked::after{
+  content: "";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 16px;
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  inset-inline-start: 1px;
+}
+.check-block label{
+  margin: 0;
+  margin: 0;
+  font-size: 16px;
+  color: rgb(128, 128, 128);
+  font-family: "Tajawal-Medium";
+  text-align: start;
+}
+.check-block{
+  display: flex;
+   
+    padding-inline-start: 20px;
+    margin-bottom: 15px;
+}
+.vendor-form-textarea{
+  border: 2px solid transparent;
+  outline: none;
+  transition: 0.5s;
+  width: 100%;
+  height:100px ;
+  border-radius: 25px;
+  background-color: rgb(242, 242, 242);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  margin: 0 0 16px;
+  padding-top: 15px;
+  color: rgb(128, 128, 128);
+}
+.vendor-form-textarea:focus{
+  border: 2px solid var(--main-hover);
+}
+.send-btn{
+  background-color: var(--main-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 176px;
+    height: 45px;
+    border-radius: 22.5px;
+    font-size: 16px;
+    font-family: "Tajawal-Bold";
+    border: 0;
+    outline: none;
+    transition: 0.5s;
+}
+.send-btn:hover{
+  background-color: var(--main-hover);
+}
+.send-btn:focus{
+  border: 0;
+  outline: none;
+}
+/*                                   join-as-vendor                           */
+
+/*                  breadcrumb                        */
+.breadcrumb-sec {
+  position: relative;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+   
+   
+    padding: 30px 0;
+    margin-top: 90px;
+}
+
+ol.breadcrumb {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+ 
+  z-index: 2;
+}
+ ol.breadcrumb li a,  ol.breadcrumb li span,  ol.breadcrumb li {
+  font-size: 14px;
+  font-family: 'Tajawal-Regular';
+  color: rgb(128, 128, 128);
+  text-decoration: none;
+}
+
+ol.breadcrumb li:not(.active):after {
+  content: "/";
+  padding: 0 7px;
+}
+
+@media (max-width: 991px){
+  .custum-breadcrumb, .breadcrumb-sec {
+    padding: 50px 0 40px;
+    margin-top: 66px;
+    height: 80px;
+    /* margin-bottom: 50px; */
+}
+
+}
+/*                         breadcrumb-section                    */
+
 /*                                    media query                                    */
 /*                    menu in phone size                      */
 
 @media (max-width: 991px) {
   body{
     overflow-x: hidden;
+  }
+  .city-note{
+    margin-inline-start: 0;
+    margin-top: 5px;
+  }
+  ol.breadcrumb{
+    justify-content: center;
+  }
+  .vendor-details .supplier-img{
+    order: 0;
+    margin-inline-start: 0;
+    width: 300px;
+  }
+  .vendor-details .supplier-name{
+    font-size: 20px;
+  }
+  .vendor-details .supplier-details{
+    padding-bottom: 0;
+  }
+  .social{
+    justify-content: center;
   }
   .nav-foot{
     display: flex;
@@ -1040,7 +1547,7 @@ padding: 0;
   }
 
   .most-search-div {
-    width: 100%;
+    width: 80%;
   }
   .caption-title {
     margin-top: 150px;
@@ -1056,7 +1563,7 @@ padding: 0;
     justify-content: center;
   }
   .search {
-    width: 90%;
+    width:80%;
     margin-bottom: 65px;
   }
   .most-search-title {
@@ -1233,7 +1740,9 @@ padding: 0;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
- 
+  .vendor-details .supplier-img{
+    width: 290px;
+  }
   .cats-div{
     max-height: 600px;
   }
@@ -1362,12 +1871,78 @@ padding: 0;
     max-width: 60%;
   }
 }
-
+@media (min-width: 1024px) and (max-width: 1180px) {
+  .search-list-icon{
+    width: 90px;
+    height: 90px;
+  }
+  .cat-slider .swiper-wrapper{
+    grid-gap: 0 10px;
+  }
+  .category-icon{
+    width: 38px;
+  }
+  .main-banner-image{
+    height: 620px;
+  }
+  .main-banner-img{
+    height: 620px;
+  }
+  .main-banner-img-cover{
+    height: 620px;
+  }
+  .search-list-icon{
+    width: 90px;
+    height: 90px;
+  }
+}
+@media (min-width: 1180px) and (max-width: 1200px) {
+  .main-banner-image{
+    height: 640px;
+  }
+  .main-banner-img{
+    height: 640px;
+  }
+  .main-banner-img-cover{
+    height: 640px;
+  }
+  .search-list-icon{
+    width: 90px;
+    height: 90px;
+  }
+  .cat-slider .swiper-wrapper{
+    grid-gap: 0 10px;
+  }
+  .category-icon{
+    width: 38px;
+  }
+}
 @media (max-width: 991px) {
   body {
     position: relative;
   }
-
+  .vendor-details .supplier-block{
+    align-items: center !important;
+  }
+  .wrap{
+    flex-wrap: wrap;
+  }
+  .join-vendor-title{
+    font-size: 20px;
+  }
+  .join-form-input{
+    height: 45px;
+  }
+  .logo-label{
+    flex-wrap: wrap;
+  }
+  .categories-grid{
+    grid-gap: 0 15px;
+  }
+  .check-block label{
+    font-size: 14px;
+  }
+ 
   .show-icons {
     position: relative;
     font-size: 24px;
@@ -1501,24 +2076,54 @@ padding: 0;
     max-height: 100%;
   }
   .search-list-icon{
+    width:80px;
+    height: 80px;
+  }
+  .category-icon{
+    width: 35px;
+  }
+  .category-name{
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 720px) and (min-width: 667px) {
+  .search{
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 720px) {
+  .search-list-icon{
     width: 100px;
     height: 100px;
   }
   .category-icon{
     width: 45px;
   }
-  .category-name{
-    font-size: 14px;
+  .search{
+    width: 65%;
+  }
+  .city-note{
+    margin-inline-start: 15px;
   }
 }
-/* @media (min-width: 992px) {
-  .slide-menu:hover .cats-dispaly {
-    opacity: 1;
-    visibility: visible;
-    z-index: 99;
+@media only screen and (max-width: 896px) and (min-width: 768px) {
+  .search{
+    width: 75%;
   }
-} */
-
+  .city-note{
+    margin-inline-start: 15px;
+  }
+ 
+}
+@media only screen and (max-width: 991px) and (min-width: 912px) {
+  .search{
+    width: 70%;
+  }
+  .city-note{
+    margin-inline-start: 15px;
+  }
+}
 @media only screen and (max-width: 994px) and (min-width: 768px) {
   .nav-foot{
     max-height: 800px;
@@ -1526,7 +2131,9 @@ padding: 0;
   .cities-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
+  .vendor-details .supplier-block{
+    align-items: center !important;
+  }
   .all-suppliers {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
