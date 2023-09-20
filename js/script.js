@@ -196,7 +196,6 @@ name.onkeypress = function(e) {
         return false;
     }
 };
-/////////////////////////////////// custom select     ///////////////////////////////////////
 
 
 
