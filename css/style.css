@@ -1293,6 +1293,7 @@ border:2px solid transparent;
 .upload__btn{
   width: 100%;
   position: relative;
+  border: 0;
 }
 .upload-image{
   position: absolute;
