@@ -1002,6 +1002,7 @@ transition: 0.5s;
   margin-top: 0.4em;
   overflow-y: auto;
   overflow-x: hidden;
+  max-height: 106px;
 }
 
 .list {
