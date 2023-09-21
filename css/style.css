@@ -962,6 +962,7 @@ transition: 0.5s;
   position: absolute;
   background-color: #f6f6f6;
   min-width: 230px;
+  max-width: 250px;
   overflow: auto;
   border: 1px solid #ddd;
   z-index: 1;
@@ -1005,17 +1006,15 @@ transition: 0.5s;
 
 .list {
   max-height: 220px;
-  padding: 0 15px;
+  padding: 0 5px;
 }
 
 .list-item {
   font-size: 14px;
-  padding: 0.5em 0.8em;
+  padding: 0.5em 0;
   border-bottom: 1px solid #d4d7e1;
   border-top: 1px solid white;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+ 
   word-wrap: normal;
   max-width: 100%;
   text-align: start;
@@ -1047,6 +1046,7 @@ transition: 0.5s;
   font-size: 14px;
   margin: 0;
   background-color: #fff;
+  height: 40px;
 }
 #myInput::placeholder{
   font-size: 14px;
@@ -2151,6 +2151,7 @@ ol.breadcrumb li:not(.active):after {
     width: 100%;
     overflow-x: hidden;
     display: block;
+    max-width: 100%;
   }
 
   
