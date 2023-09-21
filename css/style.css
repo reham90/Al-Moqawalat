@@ -932,6 +932,118 @@ transition: 0.5s;
 .w100{
   max-width: 100%;
 }
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+  overflow-y: hidden;
+  border-radius: 25px;
+}
+.show {display: block;}
+.join-form-input:focus ~ .counter {
+  opacity: 0.1;
+  transition: opacity 1s ease-in;
+}
+.radius-0{
+  border-radius: 0 !important;
+}
+.select-arrow{
+  position: absolute;
+  inset-inline-end: 20px;
+}
+
+.search-in-select{
+  position: relative;
+  display: block;
+  width: 204px;
+ height: 50px;
+}
+.dropbtn{
+  transition: 0.5s;
+  margin: 0 !important;
+}
+.dropbtn:focus{
+  border: 2px solid var(--main-hover);
+  outline: none;
+}
+
+.list-wrap {
+  margin-top: 0.4em;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.list {
+  max-height: 220px;
+  padding: 0 15px;
+}
+
+.list-item {
+  font-size: 14px;
+  padding: 0.5em 0.8em;
+  border-bottom: 1px solid #d4d7e1;
+  border-top: 1px solid white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  max-width: 100%;
+  text-align: start;
+}
+.list-item:first-child {
+  border-top: none;
+}
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.list-item-link {
+  color: #444;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.list-item-link:hover{
+  color: var(--main-hover);
+}
+
+.item-list-subtext {
+  font-size: 85%;
+  color: grey;
+}
+
+
+
+#myInput{
+  font-size: 14px;
+  margin: 0;
+}
+#myInput::placeholder{
+  font-size: 14px;
+}
 
 /*                       by-city                                        */
 
@@ -1924,6 +2036,9 @@ ol.breadcrumb li:not(.active):after {
   body {
     position: relative;
   }
+  .upload-image{
+    transform: translateY(-51%);
+  }
   .vendor-details .supplier-block{
     align-items: center !important;
   }
@@ -1933,9 +2048,7 @@ ol.breadcrumb li:not(.active):after {
   .join-vendor-title{
     font-size: 20px;
   }
-  .join-form-input{
-    height: 45px;
-  }
+  
   .logo-label{
     flex-wrap: wrap;
   }

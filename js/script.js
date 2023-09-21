@@ -61,10 +61,12 @@ function manageDrop(){
       // close after click
      
         body.addEventListener('click', function(){
+          
           if(view.classList.contains('reset-left-2')){
             view.classList.remove('reset-left-2');
             $('.bars2').toggleClass('hide-icon-2');
         $(' .times2').toggleClass('hide-icon-2');
+       
             } 
         }); // close after click outside
        
@@ -76,6 +78,30 @@ function manageDrop(){
   
   manageDrop();
 
+////////////** counter  *///////////////////////////////
+var ax = 0;
+$(window).scroll(function() {
+
+    var oTop = $('#counter').offset().top - window.innerHeight;
+    // Md.Asaduzzaman Muhid
+    if (ax == 0 && $(window).scrollTop() > oTop) {
+        $('.counter-number').each(function() {
+            var $this = $(this);
+            jQuery({
+                Counter: 0
+            }).animate({
+                Counter: $this.text()
+            }, {
+                duration: 2000,
+                easing: 'swing',
+                step: function() {
+                    $this.text(Math.ceil(this.Counter));
+                }
+            });
+        });
+        ax = 1; // Md.Asaduzzaman Muhid
+    }
+});
 
 
 
@@ -155,31 +181,7 @@ function manageDrop(){
 
 
  
-  ////////////** counter  *///////////////////////////////
-  var ax = 0;
-  $(window).scroll(function() {
-
-      var oTop = $('#counter').offset().top - window.innerHeight;
-      // Md.Asaduzzaman Muhid
-      if (ax == 0 && $(window).scrollTop() > oTop) {
-          $('.counter-number').each(function() {
-              var $this = $(this);
-              jQuery({
-                  Counter: 0
-              }).animate({
-                  Counter: $this.text()
-              }, {
-                  duration: 2000,
-                  easing: 'swing',
-                  step: function() {
-                      $this.text(Math.ceil(this.Counter));
-                  }
-              });
-          });
-          ax = 1; // Md.Asaduzzaman Muhid
-      }
-  });
-
+  
 
 
 
