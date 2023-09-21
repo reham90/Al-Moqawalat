@@ -489,6 +489,10 @@ z-index: 7;
 .search-input:focus {
   border: 2px solid var(--main-hover);
 }
+.upload-image b{
+  font-weight: normal;
+  margin-top: -2px;
+}
 .search-btn {
   position: absolute;
   inset-inline-end: 9px;
@@ -499,13 +503,14 @@ z-index: 7;
   border-radius: 50%;
   width: 45px;
   height: 45px;
-  top: 9px;
+  top: 50%;
+  transform: translateY(-50%) scaleX(-1);
 padding: 0;
   border: 0;
   outline: none;
   color: #fff;
   font-size: 24px;
-  transform: scaleX(-1);
+ 
   transition: 0.5s;
 }
 .search-btn:hover {
@@ -962,6 +967,7 @@ transition: 0.5s;
   z-index: 1;
   overflow-y: hidden;
   border-radius: 25px;
+  padding: 10px;
 }
 .show {display: block;}
 .join-form-input:focus ~ .counter {
@@ -1040,6 +1046,7 @@ transition: 0.5s;
 #myInput{
   font-size: 14px;
   margin: 0;
+  background-color: #fff;
 }
 #myInput::placeholder{
   font-size: 14px;
