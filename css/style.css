@@ -231,7 +231,7 @@ opacity: 0;
 .cats-div {
   display: flex;
   flex-wrap: wrap;
- 
+ gap:0 30px;
   max-height: 420px;
   width: 660px;
   padding-inline-start: 30px;
@@ -244,7 +244,7 @@ opacity: 0;
 
 .cats-dispaly .cat-li {
   margin: 0;
-
+  width: 285px;
   position: relative;
 }
 .cat-anchor {
@@ -2076,6 +2076,9 @@ ol.breadcrumb li:not(.active):after {
   }
   .join-vendor-title{
     font-size: 20px;
+  }
+  .cats-dispaly .cat-li{
+    width: auto;
   }
   
   .logo-label{
