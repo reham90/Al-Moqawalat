@@ -814,30 +814,7 @@ padding: 0;
   font-size: 24px;
   margin-inline-end: 5px;
 }
-.other-contact-links {
-  background-color: rgb(230, 230, 230);
-  width:45px;
-  height: 45px ;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
-.other-contact-links .ring-icon{
-  margin: 0;
-  font-size: 24px;
-  color: var(--main-color);
-  transition: 0.5s;
-}
 
-.other-contact-links:hover {
-  background-color: var(--main-hover);
-  color: #fff;
-}
-.other-contact-links:hover .ring-icon{
-  color: #fff;
-}
 
 .visitors {
   position: absolute;
@@ -936,51 +913,8 @@ transition: 0.5s;
 .social-icons li a:hover .social-icon{
   color:#fff;
 }
-.share-section{
-background-color: var(--main-color);
-min-height: 140px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-}
-.social-iconss{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  
-}
-.social-iconss li{
-  margin-inline-end: 5px;
-}
-.social-iconss li:last-child{
-  margin-inline-end: 0;
-}
-.social-iconss li a{
-  width: 36px;
-  height: 36px;
-  background-color: rgb(59, 59, 59);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: 0.5s;
-  border-radius: 50%;
-}
-.social-iconss li a:hover{
-  background-color: var(--main-hover);
-}
-.social-iconss .social-icon{
-font-size: 18px;
-color:#fff;
-transition: 0.5s;
-}
-.social-iconss li a:hover .social-icon{
-  color:#fff;
-  
-}
+
+
 .share-text{
   color: #fff;
   font-size: 16px;
@@ -1718,7 +1652,78 @@ input[type=number] {
 .gallery-slider{
   margin-bottom: 80px;
 }
+.other-contact-links {
+  background-color: rgb(230, 230, 230);
+  width:45px;
+  height: 45px ;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.other-contact-links .ring-icon{
+  margin: 0;
+  font-size: 24px;
+  color: var(--main-color);
+  transition: 0.5s;
+}
 
+.other-contact-links:hover {
+  background-color: var(--main-hover);
+  color: #fff;
+}
+.other-contact-links:hover .ring-icon{
+  color: #fff;
+}
+.social-iconss{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  
+}
+.social-iconss li{
+  margin-inline-end: 5px;
+}
+.social-iconss li:last-child{
+  margin-inline-end: 0;
+}
+.social-iconss li a{
+  width: 36px;
+  height: 36px;
+  background-color: rgb(59, 59, 59);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+.social-iconss li a:hover{
+  background-color: var(--main-hover);
+}
+.social-iconss .social-icon{
+font-size: 18px;
+color:#fff;
+transition: 0.5s;
+}
+.social-iconss li a:hover .social-icon{
+  color:#fff;
+  
+}
+.share-section{
+  background-color: var(--main-color);
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+.start{
+  align-items: flex-start !important;
+}
 /*                         contact-info                      */
 
 /*                  breadcrumb                        */
