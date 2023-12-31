@@ -197,7 +197,35 @@ $(window).scroll(function() {
 };
 
 
+ ///////// **gallery-swiper-section** /////////
+ var screen2 = new Swiper(".gallery-slider .swiper-container", {
+    loop: true,
+    autoplay: true,
+    pagination: {
+        el: ".gallery-slider .swiper-pagination",
+        clickable: true,
+    },
+   
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+        },
+        767: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
 
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        1199: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+    },
+});
 
  
   

@@ -1,3 +1,6 @@
+html{
+  overflow-x: hidden;
+}
 body {
   font-family: "Tajawal-Regular";
   box-sizing: border-box;
@@ -542,6 +545,7 @@ padding: 0;
   grid-template-columns: repeat(8, 1fr);
   grid-gap: 0 30px;
 }
+
 .search-list-block {
   display: flex;
   flex-direction: column;
@@ -811,10 +815,27 @@ padding: 0;
   margin-inline-end: 5px;
 }
 .other-contact-links {
-  background-color: var(--main-color);
+  background-color: rgb(230, 230, 230);
+  width:45px;
+  height: 45px ;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
 }
+.other-contact-links .ring-icon{
+  margin: 0;
+  font-size: 24px;
+  color: var(--main-color);
+  transition: 0.5s;
+}
+
 .other-contact-links:hover {
   background-color: var(--main-hover);
+  color: #fff;
+}
+.other-contact-links:hover .ring-icon{
   color: #fff;
 }
 
@@ -914,6 +935,58 @@ transition: 0.5s;
 }
 .social-icons li a:hover .social-icon{
   color:#fff;
+}
+.share-section{
+background-color: var(--main-color);
+min-height: 140px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.social-iconss{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  
+}
+.social-iconss li{
+  margin-inline-end: 5px;
+}
+.social-iconss li:last-child{
+  margin-inline-end: 0;
+}
+.social-iconss li a{
+  width: 36px;
+  height: 36px;
+  background-color: rgb(59, 59, 59);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+.social-iconss li a:hover{
+  background-color: var(--main-hover);
+}
+.social-iconss .social-icon{
+font-size: 18px;
+color:#fff;
+transition: 0.5s;
+}
+.social-iconss li a:hover .social-icon{
+  color:#fff;
+  
+}
+.share-text{
+  color: #fff;
+  font-size: 16px;
+  font-family: "Tajawal-Bold";
+  display: flex;
+  margin: 0 0 10px;
 }
 /*                        vendor details                          */
 
@@ -1493,6 +1566,161 @@ input[type=number] {
 }
 /*                                   join-as-vendor                           */
 
+/*                         contact-info                  */
+.contact-info-title{
+  color: var(--main-color);
+  font-size: 20px;
+  margin: 20px 0 18px;
+  font-family: "Tajawal-Bold";
+  text-align: start;
+}
+.contact-inf{
+ 
+ margin-bottom: 70px;
+ 
+}
+.contact-labels{
+  text-align: start;
+  grid-gap: 8px 67px;
+  display: flex;
+  align-items: center;
+}
+.contact-label{
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: var(--main-color);
+  font-family: "Tajawal-Bold";
+  width: 195px;
+}
+.contact-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(240, 235, 229);
+  border-radius: 50%;
+  color: var(--main-hover);
+  font-size: 24px;
+  margin-inline-end: 10px;
+}
+.contact-det{
+  color: var(--main-color);
+  font-size: 16px;
+  text-align: start;
+  display: flex;
+  font-family: "Tajawal-Medium";
+  margin: 0;
+}
+.contact-det a{
+  color: var(--main-color);
+  font-size: 16px;
+  text-align: start;
+  display: flex;
+  font-family: "Tajawal-Medium";
+  margin: 0;
+  text-decoration: underline;
+}
+.dates .contact-det{
+  display: flex;
+  align-items: center;
+  gap:0px 17px;
+  margin-bottom: 3px;
+}
+.day{
+  width: 60px;
+}
+.dates{
+  margin-top: 10px;
+}
+.upload-link{
+  color:#fff;
+  background-color: var(--main-hover);
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Tajawal-Bold";
+  transition: 0.5s;
+  margin-top: 20px;
+}
+.upload-link:hover{
+  background-color: var(--main-color);
+  color: #fff;
+}
+.upload-link i{
+  font-size: 28px;
+  margin-inline-end: 5px;
+}
+.gallery-title{
+  color: var(--main-color);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-family: "Tajawal-Bold";
+  margin: 0 0 22px;
+}
+.gallery-slider{
+  position: relative;
+}
+.gallery-block{
+  overflow: hidden;
+  transition: 0.5s;
+  width: 100%;
+}
+.gallery-block img{
+  width: 100%;
+  transition: 0.5s;
+}
+.gallery-block:hover > img{
+  transform: scale(1.2);
+}
+.gallery-slider .swiper-pagination {
+  position: relative;
+  width: 100%;
+  bottom: -28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.gallery-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.302;
+  margin: 0 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  outline: none !important;
+}
+.gallery-slider .swiper-pagination .swiper-pagination-bullet:hover {
+  background-color: var(--main-hover);
+  opacity: 1;
+}
+.gallery-slider
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--main-hover);
+  opacity: 1;
+}
+.gallery-slider{
+  margin-bottom: 80px;
+}
+
+/*                         contact-info                      */
+
 /*                  breadcrumb                        */
 .breadcrumb-sec {
   position: relative;
@@ -1564,6 +1792,42 @@ ol.breadcrumb li:not(.active):after {
   }
   .vendor-details .supplier-details{
     padding-bottom: 0;
+  }
+  .contact-labels{
+    gap:0 15px;
+  }
+  .dates{
+    margin-top: 0;
+  }
+  .contact-icon{
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  .contact-inf{
+    margin-bottom: 50px;
+  }
+  .contact-label{
+    width: 150px;
+    font-size: 13px;
+  }
+  .contact-det{
+    font-size: 13px;
+  }
+  .contact-det a{
+    font-size: 13px;
+  }
+  .contact-info-title{
+    font-size: 18px;
+  }
+  .gallery-title{
+    font-size: 18px;
+  }
+  .css-mobile{
+    flex-wrap: wrap;
+  }
+  .upload-link{
+    margin-bottom: 30px;
   }
   .social{
     justify-content: center;
